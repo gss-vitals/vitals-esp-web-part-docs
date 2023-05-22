@@ -1,0 +1,13 @@
+﻿請先加入 GSS.Core.WebPart.dll 和 GSS.Core.WebPart.Interface.dll兩個元件再執行建置：
+在方案總管的參考按右鍵加入參考，選擇瀏覽，到{ESP安裝目錄}\web\Bin\目錄下，加入 GSS.Core.WebPart.dll 和 GSS.Core.WebPart.Interface.dll 兩個元件
+
+XML的設定可參考下面範例：
+<WebPart name="WebpartTestPractice" type="WebpartTest.WebpartTestPractice" status="On">
+	<SettingList>
+		<Setting name="TestItemSetting" value="C"/>
+		<Setting name="TestBoxSetting" value="測試資料" />
+	</SettingList>
+	<ConfigSettingList>
+		<ConfigSetting key="Title" value="區塊類別名稱" />		
+	</ConfigSettingList>
+</WebPart>
