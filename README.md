@@ -12,7 +12,7 @@
 ![developmentProcess.png](/img/developmentProcess.png)
 1. [**製作客製WebPart元件流程**](#製作客製WebPart元件流程)
 2. **佈署dll**：在`{ESP安裝目錄}\data\config\webpart\implement\`目錄下，貼上步驟1的產生的客製WebPart dll檔(pdb檔可不貼)
-3. **添加客製WebPart設定**：在`{ESP安裝目錄}\data\config\webpart\WebPartManageConfig.xml`檔案中，加入[對應的取XML設定](#WebPart的XML檔設定)，並重新啟動IIS
+3. **添加客製WebPart設定**：在`{ESP安裝目錄}\data\config\webpart\WebPartManageConfig.xml`檔案中，加入[對應的XML設定](#WebPart的XML檔設定)，並重新啟動IIS
     * 如有新增修改刪除此取XML檔的設定，則要重新啟動IIS
     * WebPart的主要設定跟參數都可以透過這個檔案進行更改
 4. **確認是否需要修改webpartservice的共用內容**：在`{ESP安裝目錄}\web\webpart\`目錄下，cs，js，css檔案的修改將會影響WebPart的呈現
@@ -29,7 +29,7 @@
     * RenderTitle：用於返回建立時顯示的標題，通常讀取[XML設定](#WebPart的XML檔設定)的ConfigSettingList
     * RenderDescription：用於返回標題後的補充描述
     * RenderContent：用於返回WebPart的HTML字串的內容，最後會透過webpart.css和webpart.js渲染
-5. 實作過程中取得設定的方法請參考[通用類別](#通用類別)章節
+5. 實作過程中取得設定的方法請參考[通用類別](#通用類別)章節，另外也可以使用BaseWebPart(被繼承類別)裡的方法
 6. 在方案總管的解決方案按右鍵建置方案，客製的dll元件會被輸出在專案位置的Bin目錄下
 
 ---
